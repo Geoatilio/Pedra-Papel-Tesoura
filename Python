@@ -1,0 +1,39 @@
+from random import choice
+
+ganha = {"tesoura":"papel", "pedra":"tesoura", "papel": "pedra"}
+
+while True:
+    print("pedra, papel, tesouuuura!")
+    escolha_jogador = input("Qual sua escolha (pedra, papel ou tesoura)? ")
+    escolha_jogador = escolha_jogador.lower()
+    #verifica se a entrada do usuário é válida ou não.
+    #permite que ele jogue quantas rodadas quiser.
+    if escolha_jogador not in ganha:
+        print("Escolha inválida. Tente novamente.")
+        continue
+
+    escolha_pc = choice(["pedra", "papel", "tesoura"])
+    print(f"O computador escolheu: {escolha_pc}")
+    
+    if escolha_jogador == escolha_pc:
+        print("Empatou!")
+    elif ganha[escolha_jogador] == escolha_pc:
+        print("Você ganhou!")
+    else:
+        print("Você perdeu!")
+        continue
+        while True:
+          sair = input("Jogar novamente? (sim/não): ")
+        sair = sair.lower()
+        if sair == "sim" or sair == "não":
+      
+    
+          sair = input("Deseja sair? (sim/não) ")
+    if escolha_jogador not in ganha:
+        print("Escolha inválida. Tente novamente.")
+        continue
+    elif sair.lower() == "sim":
+     break
+ 
+        
+print("Obrigado por jogar!")
